@@ -4,9 +4,9 @@ Summary:	A handy tool which will check if users have passwords
 Name:		pwchecker
 Version:	1.1
 Release:	1.vortex%{?dist}
+Vendor:		Vortex RPM
 BuildArch:	noarch
 License:	GPLv3
-Vendor:		Vortex RPM
 Group:		Applications/System
 URL:		http://thesharp.ru/pwchecker
 Source0:	http://thesharp.ru/pwchecker/pwchecker-%{version}.tar.gz
