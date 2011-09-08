@@ -3,13 +3,14 @@
 Summary:	A handy tool which will check if users have passwords
 Name:		pwchecker
 Version:	1.1
-Release:	1.vortex%{?dist}
+Release:	2.vortex%{?dist}
 Vendor:		Vortex RPM
 BuildArch:	noarch
 License:	GPLv3
 Group:		Applications/System
 URL:		http://thesharp.ru/pwchecker
 Source0:	http://thesharp.ru/pwchecker/pwchecker-%{version}.tar.gz
+Requires:	mailx
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 %description
@@ -35,11 +36,14 @@ rm -rf %{buildroot}
 %doc ChangeLog LICENSE
 
 %changelog
-* Thu Sep 08 2011  Ilya A. Otyutskiy <sharp@thesharp.ru> 1.1-1.vortex
+* Thu Sep 08 2011  Ilya A. Otyutskiy <sharp@thesharp.ru> - 1.1-2.vortex
+- Add mailx to Requires.
+
+* Thu Sep 08 2011  Ilya A. Otyutskiy <sharp@thesharp.ru> - 1.1-1.vortex
 - Version bump.
 - License under GPLv3.
 - Update URL.
 
-* Tue Apr 25 2011  Ilya A. Otyutskiy <otyutskiy@wiw.ru> 1.0-1
+* Tue Apr 25 2011  Ilya A. Otyutskiy <otyutskiy@wiw.ru> - 1.0-1
 - Initial packaging for CentOS.
 
