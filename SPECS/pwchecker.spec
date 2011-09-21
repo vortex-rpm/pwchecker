@@ -1,20 +1,21 @@
 %define debug_package %{nil}
 
-Summary:	A handy tool which will check if users have passwords
+Summary:	A cronjob which reports of users with passwords
 Name:		pwchecker
-Version:	1.1
-Release:	2.vortex%{?dist}
+Version:	1.2
+Release:	1.vortex%{?dist}
 Vendor:		Vortex RPM
 BuildArch:	noarch
 License:	GPLv3
 Group:		Applications/System
-URL:		http://thesharp.ru/pwchecker
-Source0:	http://thesharp.ru/pwchecker/pwchecker-%{version}.tar.gz
+URL:		http://launchpad.net/pwchecker
+Source0:	http://launchpad.net/pwchecker/trunk/1.2/+download/pwchecker-%{version}.tar.gz
 Requires:	mailx
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 %description
-A handy tool which will check if users have passwords.
+This script will email you a daily report about users which have passwords
+on your system. Exclude list for users is supported.
 
 %prep
 %setup -q -n pwchecker-%{version}
@@ -33,9 +34,14 @@ rm -rf %{buildroot}
 %defattr(-,root,root,-)
 %{_sysconfdir}/cron.daily/pwchecker
 %config(noreplace) %{_sysconfdir}/sysconfig/pwchecker
-%doc ChangeLog LICENSE
+%doc ChangeLog LICENSE README
 
 %changelog
+* Wed Sep 21 2011  Ilya A. Otyutskiy <sharp@thesharp.ru> - 1.2-1.vortex
+- New upstream release.
+- Update URL and Source0 URLs.
+- Add README to doc section.
+
 * Thu Sep 08 2011  Ilya A. Otyutskiy <sharp@thesharp.ru> - 1.1-2.vortex
 - Add mailx to Requires.
 
