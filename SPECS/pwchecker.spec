@@ -9,7 +9,7 @@ BuildArch:	noarch
 License:	GPLv3
 Group:		Applications/System
 URL:		https://fedorahosted.org/pwchecker
-Source0:	https://fedorahosted.org/released/%{name}/%{name}-{%version}.tar.gz
+Source0:	https://fedorahosted.org/released/%{name}/%{name}-%{version}.tar.gz
 Requires:	mailx
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
