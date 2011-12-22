@@ -2,14 +2,14 @@
 
 Summary:	A cronjob which reports of users with passwords
 Name:		pwchecker
-Version:	1.2
+Version:	1.3
 Release:	1.vortex%{?dist}
 Vendor:		Vortex RPM
 BuildArch:	noarch
 License:	GPLv3
 Group:		Applications/System
-URL:		http://launchpad.net/pwchecker
-Source0:	http://launchpad.net/pwchecker/trunk/1.2/+download/pwchecker-%{version}.tar.gz
+URL:		https://fedorahosted.org/pwchecker
+Source0:	https://fedorahosted.org/released/%{name}/%{name}-{%version}.tar.gz
 Requires:	mailx
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
@@ -37,19 +37,23 @@ rm -rf %{buildroot}
 %doc ChangeLog LICENSE README
 
 %changelog
-* Wed Sep 21 2011  Ilya A. Otyutskiy <sharp@thesharp.ru> - 1.2-1.vortex
+* Thu Dec 22 2011 Ilya A. Otyutskiy <sharp@thesharp.ru> - 1.3-1.vortex
+- New upstream release.
+- Update URL and Source0 URLs.
+
+* Wed Sep 21 2011 Ilya A. Otyutskiy <sharp@thesharp.ru> - 1.2-1.vortex
 - New upstream release.
 - Update URL and Source0 URLs.
 - Add README to doc section.
 
-* Thu Sep 08 2011  Ilya A. Otyutskiy <sharp@thesharp.ru> - 1.1-2.vortex
+* Thu Sep 08 2011 Ilya A. Otyutskiy <sharp@thesharp.ru> - 1.1-2.vortex
 - Add mailx to Requires.
 
-* Thu Sep 08 2011  Ilya A. Otyutskiy <sharp@thesharp.ru> - 1.1-1.vortex
+* Thu Sep 08 2011 Ilya A. Otyutskiy <sharp@thesharp.ru> - 1.1-1.vortex
 - Version bump.
 - License under GPLv3.
 - Update URL.
 
-* Tue Apr 25 2011  Ilya A. Otyutskiy <otyutskiy@wiw.ru> - 1.0-1
+* Tue Apr 25 2011 Ilya A. Otyutskiy <otyutskiy@wiw.ru> - 1.0-1
 - Initial packaging for CentOS.
 
